@@ -1,4 +1,4 @@
-#pizzeriahub.vercel.app
+# pizzeriahub.vercel.app
 
 React + TypeScript Pizza shop app
 
@@ -19,4 +19,4 @@ $ npm install
 $ npm run dev
 ```
 
-It requires integrating with external APIs
+It requires integrating with external geolocation & pizza data APIs
