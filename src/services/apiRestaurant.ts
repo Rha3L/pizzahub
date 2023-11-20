@@ -2,7 +2,6 @@ import { Order } from "../types";
 
 export async function getMenu() {
     const res = await fetch(`${import.meta.env.VITE_API_URL}/menu`);
-    
     if (!res.ok) throw Error("Failed getting menu");
 
     const { data } = await res.json();
@@ -12,7 +11,6 @@ export async function getMenu() {
 export async function getOrder(id: string) {
   const res = await fetch(`${import.meta.env.VITE_API_URL}/order/${id}`);
   if (!res.ok) throw Error(`Couldn't find order #${id}`);
-
   const { data } = await res.json();
   return data;
 }
@@ -26,7 +24,6 @@ export async function createOrder(newOrder: Partial<Order>): Promise<Order> {
         "Content-Type": "application/json",
       },
     });
-
     if (!res.ok) throw Error();
     const { data } = await res.json();
     return data;

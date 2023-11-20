@@ -18,19 +18,18 @@ export async function createOrderAction({ request }: ActionFunctionArgs) {
   console.log(order);
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const errors: any = {};
-  if (!isValidPhone(order.phone!)) {
+  const errors: any | null = {};
+  if (!isValidPhone(order.phone!)) 
     errors.phone =
       "Please give us your correct phone number. We might need it to contact you.";
+  
+  if (Object.keys(errors).length > 0) return errors;
+  
+  // If everything is okay, create new order and redirect
+  const newOrder = await createOrder(order);
 
-    if (Object.keys(errors).length > 0) return errors;
+  // Do NOT overuse
+  store.dispatch(clearCart());
 
-    // If everything is okay, create new order and redirect
-    const newOrder = await createOrder(order);
-
-    // Do NOT overuse
-    store.dispatch(clearCart());
-
-    return redirect(`/order/${newOrder.id}`);
-  }
+  return redirect(`/order/${newOrder.id}`);
 }
