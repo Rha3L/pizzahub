@@ -25,6 +25,7 @@ function CreateUser() {
 
       <input
         type="text"
+        id="username"
         placeholder="Your full name"
         value={username}
         onChange={(e: React.FormEvent<HTMLInputElement>) => setUsername(e.currentTarget.value)}
