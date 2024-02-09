@@ -12,6 +12,8 @@ const initialState: CartState = {
   //     quantity: 2,
   //     unitPrice: 16,
   //     totalPrice: 32,
+  //     addIngredients: [],
+  //     removeIngredients: [],
   //   },
   // ],
 };

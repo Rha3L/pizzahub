@@ -34,6 +34,8 @@ export interface Order {
   priority: boolean;
   estimatedDelivery: string;
   cart: CartItem[];
+  addIngredients?: string[];
+  removeIngredients?: string[];
   position: string;
   orderPrice: number;
   priorityPrice: number;

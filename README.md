@@ -1,6 +1,6 @@
 # pizzeriahub.vercel.app
 
-React + TypeScript Pizza shop app
+React + TypeScript front end website developed for a pizza shop
 
 ## Tech stack
 
@@ -13,7 +13,7 @@ React + TypeScript Pizza shop app
 ## Run project locally
 
 ```bash
-$ git clone https://github.com/Rha3L/pizzeriahub-ts.git
+$ git clone https://github.com/Rha3L/pizzahub-ts.git
 $ cd pizzeriahub-ts
 $ npm install
 $ npm run dev
