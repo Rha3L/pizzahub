@@ -13,8 +13,8 @@ React + TypeScript front end website developed for a pizza shop
 ## Run project locally
 
 ```bash
-$ git clone https://github.com/Rha3L/pizzahub-ts.git
-$ cd pizzeriahub-ts
+$ git clone https://github.com/Rha3L/pizzahub.git
+$ cd pizzahub
 $ npm install
 $ npm run dev
 ```
